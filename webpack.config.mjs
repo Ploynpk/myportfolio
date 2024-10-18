@@ -1,8 +1,12 @@
+import { fileURLToPath } from 'url';
 import path from 'path';
 import HtmlWebPackPlugin from 'html-webpack-plugin';
 
-module.exports = {
-  entry: './src/index.js',
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+export default {
+  entry: './src/index.ts',
   mode: 'development',
   output: {
     filename: 'bundle.js',
@@ -12,7 +16,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -36,7 +40,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
     alias: {
       '@emotion/react': path.resolve(__dirname, 'node_modules/@emotion/react'),
     },
