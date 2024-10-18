@@ -8,3 +8,5 @@ www.ploynapa.com
    ```
   Next.js , TypeScript , OpenAI , Python , Webpack , Cypress , Jest , CI/CD , Redis , RabbitMQ, WebSocket
    ```
+
+# On progress ..
